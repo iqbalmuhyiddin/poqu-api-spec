@@ -151,12 +151,7 @@ optional:
         description,
         bio
       },
-      categories: [
-        {
-          name,
-          slug
-        }
-      ]
+      categories: [name]
     }
   ]
 }
@@ -180,28 +175,21 @@ required: `id=[integer]`
 {
   success: true | false,
   message: "data loaded"
-  data:{
-    id,
-    title,
-    description,
-    duration_time,
-    duration_second,
-    audio_link,
-    cover_link,
-    podcaster:{
+  data: {
       id,
-      name,
+      title,
       description,
-      bio
-    },
-    categories: [
-      {
+      duration_second,
+      audio_link,
+      cover_link,
+      podcaster:{
         id,
         name,
-        slug
-      }
-    ]
-  }
+        description,
+        bio
+      },
+      categories: [name]
+    }
 }
 ```
 
